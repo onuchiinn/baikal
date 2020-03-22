@@ -245,6 +245,7 @@ body {
   background-color: #fff;
   cursor: pointer;
   color: #3c3d41;
+  border-radius: 4px;
 }
 .filter__title {
   display: flex;
@@ -257,12 +258,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1vw;
   font-weight: bold;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .filter__list {
   display: flex;
   justify-content: start;
-  align-items: start;  
+  align-items: start;
   flex-wrap: wrap;
   padding: 18px;
   & label {
@@ -273,6 +275,12 @@ body {
     width: 32px;
     height: 32px;
     border-radius: 32px;
+    background-color: #eeeeee;
+    color: #3c3d41;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: "Montserrat";
+    font-weight: bold;
   }
   & li {
     margin-right: 8px;
@@ -287,8 +295,13 @@ body {
   }
 }
 
-.filter__list_color input[type=checkbox]:checked + label {
+.filter__list_color input[type="checkbox"]:checked + label {
   box-shadow: 0 0 5px 2px #3a3d3f;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #838d8f;
+  color: #fff;
 }
 
 

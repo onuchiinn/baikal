@@ -1043,6 +1043,7 @@ body {
   background-color: #fff;
   cursor: pointer;
   color: #3c3d41;
+  border-radius: 4px;
 }
 
 .filter__title {
@@ -1056,6 +1057,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1vw;
   font-weight: bold;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .filter__list {
@@ -1074,6 +1076,12 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 32px;
+  background-color: #eeeeee;
+  color: #3c3d41;
+  cursor: pointer;
+  font-size: 11px;
+  font-family: "Montserrat";
+  font-weight: bold;
 }
 
 .filter__list li {
@@ -1090,8 +1098,13 @@ body {
   display: none;
 }
 
-.filter__list_color input[type=checkbox]:checked + label {
+.filter__list_color input[type="checkbox"]:checked + label {
   box-shadow: 0 0 5px 2px #3a3d3f;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #838d8f;
+  color: #fff;
 }
 
 .goods__rightpart {
