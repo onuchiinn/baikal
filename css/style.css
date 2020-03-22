@@ -1107,6 +1107,25 @@ input[type="checkbox"]:checked + label {
   color: #fff;
 }
 
+.filter__slider-price {
+  margin: 25px 20px 0px;
+}
+
+.price__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.price__box input {
+  border: none;
+  font-size: 13px;
+  color: #878787;
+  text-align: center;
+  width: 100%;
+}
+
 .goods__rightpart {
   padding-left: 20px;
 }
