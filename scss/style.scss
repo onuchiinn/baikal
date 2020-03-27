@@ -368,6 +368,12 @@ input[type="checkbox"]:checked + label {
   max-width: 148px;
   margin: 0 auto;
   text-align: center;
+  a {
+    color: #3a3d3f;
+  }
+  a:hover {
+    color: #1f2021;
+  }
 }
 .goods__item-subtitle {
   color: #c1c5c6;
