@@ -900,6 +900,10 @@ body {
   color: #3c3d41;
 }
 
+.menu__list a:hover {
+  color: #000;
+}
+
 .menu__list li + li {
   margin-left: 35px;
 }
@@ -968,6 +972,7 @@ body {
 .category {
   border-radius: 4px;
   border-style: solid;
+  font-family: "Montserrat", sans-serif;
 }
 
 .list__box {
@@ -985,6 +990,7 @@ body {
   padding: 0 20px;
   background-color: #fff;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .title__box svg {
@@ -1054,9 +1060,10 @@ body {
   height: 50px;
   padding: 0 20px;
   font-size: 11px;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1vw;
-  font-weight: bold;
+  font-weight: 700;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -1146,12 +1153,29 @@ input[type="checkbox"]:checked + label {
   color: #3a3d3f;
   font-family: "Montserrat";
   position: relative;
+  transition-duration: 500ms;
+}
+
+.goods__item:hover {
+  border: 5px solid #d1e2e5;
 }
 
 .goods__item_new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 17px;
+  right: 15px;
+  background-color: #84ce8b;
+  color: #fff;
+  border-radius: 4px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  width: 40px;
+  height: 17px;
 }
 
 .goods__item-image {
@@ -1202,4 +1226,78 @@ input[type="checkbox"]:checked + label {
   border-radius: 4px;
   margin-top: 38px;
   margin-bottom: 80px;
+}
+
+.footer {
+  background-color: #fff;
+  font-family: "Montserrat";
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__menu {
+  margin: 55px 0 35px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.footer__menu li + li {
+  margin-left: 28px;
+}
+
+.footer__menu a {
+  color: #3c3d41;
+}
+
+.footer__menu a:hover {
+  color: #000;
+  font-size: 13px;
+}
+
+.footer__subcribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3c3d41;
+  position: relative;
+}
+
+.footer__subcribe span {
+  font-size: 11px;
+  font-weight: 700;
+  margin-right: 24px;
+}
+
+.footer__form_email {
+  background-color: #eeeeee;
+  color: #a1a1a1;
+  border: 0px solid #eeeeee;
+  border-radius: 4px;
+  height: 32px;
+  width: 226px;
+  padding-left: 13px;
+}
+
+.footer__form_img {
+  position: absolute;
+  top: 9px;
+  right: 335px;
+  z-index: 2;
+}
+
+.footer__social-network {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 33px;
+  margin-bottom: 50px;
+}
+
+.footer__social-network li + li {
+  margin-left: 40px;
 }
