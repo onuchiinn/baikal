@@ -45,7 +45,13 @@ body {
   padding: 7px 15px 8px 25px;
   border: 1px solid #7e7e7e;
   border-radius: 4px;
-  span {
+  transition-duration: 500ms;
+  &:hover {
+    background-color: #fff;
+    color: #7e7e7e;
+    cursor: pointer;
+  }
+  & span {
     padding-left: 22px;
   }
 }
@@ -88,10 +94,33 @@ body {
   padding: 9px 19px 9px 23px;
   border: 1px solid #8ad592;
   border-radius: 4px;
-  span {
+  transition-duration: 500ms;
+  position: relative;
+  &:hover {
+    background-color: #fff;
+    cursor: pointer;
+  }
+  & span {
+    padding-top: 2px;
     padding-left: 17px;
     color: #85cd8d;
   }
+}
+
+.cartbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 200px;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
 }
 
 .menu {
@@ -126,7 +155,6 @@ body {
 }
 
 .top {
-  border-radius: 4px;
   background-image: -moz-radial-gradient(50% 50%, circle closest-side, rgb(215, 232, 236) 0%, rgb(194, 209, 209) 100%);
   background-image: -webkit-radial-gradient(
     50% 50%,
@@ -135,6 +163,7 @@ body {
     rgb(194, 209, 209) 100%
   );
   background-image: -ms-radial-gradient(50% 50%, circle closest-side, rgb(215, 232, 236) 0%, rgb(194, 209, 209) 100%);
+  height: 200px;
 }
 .top__inner {
   position: relative;
@@ -157,7 +186,7 @@ body {
   font-family: "PTSerif";
   line-height: 1.4;
   color: #666666;
-  padding-bottom: 38px;
+  padding-bottom: 29px;
   max-width: 253px;
   text-align: center;
   margin: 0 auto;
@@ -183,7 +212,7 @@ body {
 
 .category {
   border-radius: 4px;
-  border-style: solid;
+  overflow: hidden;
   font-family: "Montserrat", sans-serif;
 }
 .list__box {
@@ -311,14 +340,15 @@ input[type="checkbox"]:checked + label {
 }
 
 .filter__slider-price {
-  margin: 25px 20px 0px ;
+  margin: 35px 20px 25px;
 }
 
 .price__box {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: flex-start;
   flex-wrap: nowrap;
+  margin-top: -25px;
   & input {
     border: none;
     font-size: 13px;
@@ -327,18 +357,6 @@ input[type="checkbox"]:checked + label {
     width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .goods__rightpart {
   padding-left: 20px;
@@ -370,7 +388,7 @@ input[type="checkbox"]:checked + label {
   position: absolute;
   top: 17px;
   right: 15px;
-  background-color: #84ce8b;  
+  background-color: #84ce8b;
   color: #fff;
   border-radius: 4px;
   font-family: "Montserrat";
@@ -415,7 +433,6 @@ input[type="checkbox"]:checked + label {
   width: 730px;
   height: 45px;
   background-color: #b8c6c7;
-  color: #fff;
   font-size: 15px;
   font-family: "Montserrat";
   font-weight: 700;
@@ -423,10 +440,10 @@ input[type="checkbox"]:checked + label {
   border-radius: 4px;
   margin-top: 38px;
   margin-bottom: 80px;
+  a {
+    color: #fff;
+  }
 }
-
-
-
 
 .footer {
   background-color: #fff;
@@ -443,7 +460,7 @@ input[type="checkbox"]:checked + label {
   justify-content: center;
   font-size: 12px;
   font-weight: 700;
-  & li+li {
+  & li + li {
     margin-left: 28px;
   }
   & a {
@@ -462,14 +479,14 @@ input[type="checkbox"]:checked + label {
   color: #3c3d41;
   position: relative;
   & span {
-      font-size: 11px;
-      font-weight: 700;
-      margin-right: 24px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 24px;
   }
 }
 .footer__form_email {
   background-color: #eeeeee;
-  color:#a1a1a1;
+  color: #a1a1a1;
   border: 0px solid #eeeeee;
   border-radius: 4px;
   height: 32px;
@@ -482,7 +499,6 @@ input[type="checkbox"]:checked + label {
   top: 9px;
   right: 335px;
   z-index: 2;
-
 }
 .footer__social-network {
   display: flex;
@@ -490,7 +506,7 @@ input[type="checkbox"]:checked + label {
   align-items: center;
   margin-top: 33px;
   margin-bottom: 50px;
-  & li+li {
+  & li + li {
     margin-left: 40px;
   }
 }
