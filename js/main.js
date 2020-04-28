@@ -8,13 +8,13 @@
 
 // headerCart.addEventListener ('click', function () {
 //     cartBox.classList.remove('hidden');
-// });
 
 
-// Почему-то не отрабатывает...
+
+// // Почему-то не отрабатывает...
 
 // cartboxClose.addEventListener ('click', function () {
 //     console.log ('hihih');
 //     cartBox.classList.add('hidden');
     
-// });
+// // });

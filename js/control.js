@@ -14,17 +14,23 @@ $(function () {
         range: true,
         values: [190, 728],
         slide: function (event, ui) {
-            $('input[name="minPrice"]').val( '$' + 
-            ui.values[0]);
-            $('input[name="maxPrice"]').val( '$' + 
-            ui.values[1]);
+            $('input[name="minPrice"]').val('$' +
+                ui.values[0]);
+            $('input[name="maxPrice"]').val('$' +
+                ui.values[1]);
         }
     });
 
-    $('input[name="minPrice"]').val( '$' + 
-        $('.filter__slider-price').slider('values', 0) );
-    $('input[name="maxPrice"]').val(  '$' + 
-        $('.filter__slider-price').slider('values', 1) );
+    $('input[name="minPrice"]').val('$' +
+        $('.filter__slider-price').slider('values', 0));
+    $('input[name="maxPrice"]').val('$' +
+        $('.filter__slider-price').slider('values', 1));
+});
 
-
+$('.goods__btn').on('click', function () {
+    $('.goods__leftpart').slideToggle();
+    $('.goods__items').css({
+        'grid-template-columns': '1fr',
+        'grid-template-rows': '1fr'
+    });
 });

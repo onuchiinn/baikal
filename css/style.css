@@ -805,8 +805,8 @@ body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 110px;
-  padding-right: 110px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .header__inner {
@@ -1003,6 +1003,7 @@ body {
 
 .goods__inner {
   display: flex;
+  justify-content: center;
 }
 
 .goods__leftpart {
@@ -1187,8 +1188,6 @@ input[type="checkbox"]:checked + label {
 }
 
 .goods__item {
-  height: 300px;
-  width: 230px;
   background: #fff;
   text-align: center;
   border-radius: 4px;
@@ -1199,7 +1198,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .goods__item:hover {
-  border: 5px solid #d1e2e5;
+  background: #d1e2e583;
 }
 
 .goods__item_new {
@@ -1309,13 +1308,16 @@ input[type="checkbox"]:checked + label {
   justify-content: center;
   align-items: center;
   color: #3c3d41;
-  position: relative;
 }
 
 .footer__subcribe span {
   font-size: 11px;
   font-weight: 700;
   margin-right: 24px;
+}
+
+.footer__form {
+  position: relative;
 }
 
 .footer__form_email {
@@ -1330,8 +1332,8 @@ input[type="checkbox"]:checked + label {
 
 .footer__form_img {
   position: absolute;
-  top: 9px;
-  right: 335px;
+  top: 10px;
+  right: 10px;
   z-index: 2;
 }
 
@@ -1376,8 +1378,6 @@ input[type="checkbox"]:checked + label {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
   .goods__item {
-    height: 300px;
-    width: 355px;
     background: #fff;
     text-align: center;
     border-radius: 4px;
@@ -1410,5 +1410,44 @@ input[type="checkbox"]:checked + label {
   .goods__item-price {
     font-size: 14px;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 920px) {
+  .goods__leftpart {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    text-align: center;
+    z-index: 5;
+  }
+  .goods__btn {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 20px;
+    position: relative;
+  }
+  .goods__btn span {
+    width: 100%;
+    height: 2px;
+    background-color: #1a50a8;
+    top: 9px;
+    position: absolute;
+  }
+  .goods__btn::after,
+  .goods__btn::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #1a50a8;
+    position: absolute;
+  }
+  .goods__btn::after {
+    top: 0;
+  }
+  .goods__btn::before {
+    bottom: 0;
   }
 }
